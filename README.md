@@ -23,3 +23,12 @@ The goal of this analysis is to:
 To view the analysis, open:
 
 analysis.ipynb
+
+## Questions:
+
+1. How punctual/consistent are the trains in each borough? (Maybe use the divisions?) -Jahaira
+2. Does weather have an influence on train time? -Thalyann
+3. Is there a difference in service time between off-peak and peak service periods? -Rosania
+    a. What influence does the number of passengers have with train punctuality?
+4. How satisfied are passengers with travel time of trains (using total_apt, over 5 mins/ % and customer journey time)? - Mina
+5. How do delays vary by the day of the week? -Jessica
