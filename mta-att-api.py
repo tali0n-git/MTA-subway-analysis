@@ -1,5 +1,6 @@
 import requests
 import json
+import csv
 
 dataset_id = "4apg-4kt9"
 base_url = "https://data.ny.gov/resource/"
@@ -24,3 +25,5 @@ except requests.exceptions.RequestException as e:
     print(f"Error fetching data: {e}")
 except json.JSONDecodeError as e:
     print(f"Error decoding JSON: {e}")
+
+
