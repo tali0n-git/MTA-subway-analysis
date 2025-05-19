@@ -13,7 +13,7 @@ The goal of this analysis is to:
 
 ## Files in this Project
 
-* `mta-feed.py`: The script used to download the MTA feed, parse the data, and create the Pandas DataFrames.
+* `mta-att-apipy`: The access point of our MTA api, JSON data
 * `gtfs_realtime_pb2.py`: Python classes generated from the `gtfs-realtime.proto` file (required for parsing the feed).
 * `gtfs-realtime.proto`: The Protocol Buffer schema definition for GTFS Realtime data.
 * `data` (csv files): The CSV files where DataFrames will be exported.
