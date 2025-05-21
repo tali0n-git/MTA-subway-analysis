@@ -31,4 +31,4 @@ analysis.ipynb
 3. Is there a difference in service time between off-peak and peak service periods? -Rosania
     a. What influence does the number of passengers have with train punctuality?
 4. How satisfied are passengers with travel time of trains (using total_apt, over 5 mins/ % and customer journey time)? - Mina
-5. How do delays vary by the day of the week? -Jessica
+5. How do average platform and train delays change over time, and what months experience the worst performance in 2020-2024? -Jessica
