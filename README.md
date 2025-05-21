@@ -1,34 +1,25 @@
 # MTA Subway Data Analysis
 
-This project analyzes real-time data from the Metropolitan Transportation Authority (MTA) subway system in New York City. It fetches live feed data for the A, C, E lines and potentially others, processes it using the `protobuf` and `pandas` libraries, and organizes the information into Pandas DataFrames.
-
-## Overview
-
-The goal of this analysis is to:
-
-* Download real-time subway feed data from the MTA API.
-* Parse the Protocol Buffer encoded data.
-* Structure the data into manageable Pandas DataFrames for further analysis.
-* Potentially explore trends, predict arrivals, or visualize subway activity (depending on future development).
+This project analyzes data from the Metropolitan Transportation Authority (MTA) subway system in New York City. The analysis focuses on customer journey times, train delays, and other performance metrics to understand the efficiency and reliability of subway services.
 
 ## Files in this Project
 
-* `mta-att-apipy`: The access point of our MTA api, JSON data
-* `gtfs_realtime_pb2.py`: Python classes generated from the `gtfs-realtime.proto` file (required for parsing the feed).
-* `gtfs-realtime.proto`: The Protocol Buffer schema definition for GTFS Realtime data.
-* `data` (csv files): The CSV files where DataFrames will be exported.
-
-## Usage
-
-To view the analysis, open:
-
-analysis.ipynb
+* `data` (csv files): The CSV files where DataFrames will be generated from.
+* notebooks: Jupyter notebooks (5) for data exploration and analysis.
+* `mta-att-apipy`: The access point of our MTA api, JSON data. Was not implemented in the analysis but is available for future use.
+* 'README.md': This file, which provides an overview of the project and answers to analytical questions.
 
 ## Questions:
 
-1. How punctual/consistent are the trains in each borough? (Maybe use the divisions?) -Jahaira
-2. Does weather have an influence on train time? -Thalyann
+1. How punctual/consistent are the trains in each borough? -Jahaira
+2. Does weather have an influence on train delays? -Thalyann
 3. Is there a difference in service time between off-peak and peak service periods? -Rosania
     a. What influence does the number of passengers have with train punctuality?
-4. How satisfied are passengers with travel time of trains (using total_apt, over 5 mins/ % and customer journey time)? - Mina
+4. How did passenger experience (measured by delays and journey time performance) change over subway lines and time? - Mina
 5. How do average platform and train delays change over time, and what months experience the worst performance in 2020-2024? -Jessica
+
+
+# Recommendations for the MTA
+1. Weather Preparedness: Implement strategies to mitigate the impact of adverse weather conditions on train delays.
+2. Peak vs Off-Peak Analysis: MTA should consider adjusting service frequency during peak hours to accommodate increased passenger volume.
+3. Passenger Experience: MTA should prioritize improving passenger experience by addressing delays and journey time performance. (How?)
