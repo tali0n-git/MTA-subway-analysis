@@ -68,5 +68,10 @@ The goal of this analysis is to:
 
 
 2. Does weather have an influence on train time? -Thalyann
-3. Is there a difference in service time between off-peak and peak service periods? -Rosania
-    a. What influence does the number of passengers have with train punctuality?
+
+### Is there a difference in service time between off-peak and peak service periods? 
+### What influence does the number of passengers have with train punctuality?
+
+* There is no difference in service time between offpeak and peak service. From the graphs below, the average customer journey time for offpeak and peak service was evenly split for both. Peak service is slight more than 3.0 compared to offpeak service in comparing with number of passengers. Besides that, nothing influences the service time between offpeak and peak service.
+
+* According to Pearson's correlation coefficient for Number of Passengers and Customer Journey Time, there is no correlation. Customer Journey Time was -0.31 which is closer to -1 than 0. Hence, it's a very weak negative correlation. It looks that there's no influence on the number of passengers and train punctuality.
