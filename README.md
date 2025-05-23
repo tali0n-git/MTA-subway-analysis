@@ -61,13 +61,16 @@ The goal of this analysis is to:
 
 * The top worst 5 months (Sep 2021,Oct 2022, Dec 2023, Nov 2024, Jan 2024) can suggest delays occur the most during the fall and winter months. From 2020 to 2024, average platform and train delays are higher in colder months. This insight can help transit authorities target months that need more improvements such as increasing staffing and planning more scheduled MTA services for less wait time. 
 
+### Does weather have an influence on train time?
 
+* Ultimately, the correlation between weather (precipitation, snow, and temperature) and total train time for underground trains is weak (0.06, 0.03, and 0.003 respectively).
 
+* However, the correlation between precipitation and total train time for above ground trains is slightly stronger (0.08 vs 0.06). This suggests that rain has a minor impact on above ground when compared to the service of all trains. For snow and temperature, the correlation is even weaker (0.03 and 0.003 respectively). This suggests that snow and temperature have a negligible impact on above ground trains when compared to underground trains.
 
+* This could be an incorrect assessment, as the trains were divided into above ground and underground based on the station location. This means that the train could be above ground for part of the trip and underground for the rest. This could lead to an underestimation of the impact of weather on total train time for above ground trains.
 
+* A future analysis could include a more detailed breakdown of the train routes and their locations to get a better understanding of the impact of weather on total train time. This could include breaking down the train routes into percentages of their being above ground and underground, and then using that information to calculate a more accurate correlation between weather and total train time.
 
-
-2. Does weather have an influence on train time? -Thalyann
 
 ### Is there a difference in service time between off-peak and peak service periods? 
 ### What influence does the number of passengers have with train punctuality?
