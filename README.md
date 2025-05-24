@@ -17,10 +17,7 @@ To explore trends in the MTA subway system in New York City, we performed a diff
 * `mta-att-apipy`: The access point of our MTA api, JSON data
 * `gtfs_realtime_pb2.py`: Python classes generated from the `gtfs-realtime.proto` file (required for parsing the feed).
 * `gtfs-realtime.proto`: The Protocol Buffer schema definition for GTFS Realtime data.
-* `Jan_2020-Dec_2022_weather.csv` : Weather data from January 2020 - December 2022. 
-* `Jan_2023-Dec_2024_weather.csv` : Weather data from January 2023 - December 2024.
-* `MTA_Subway_Customer_Metrics__2015-2019.csv` : MTA data from train lines from 2015 - 2019.
-* `MTA_Subway_Customer_Metrics_2020-2024.csv` : MTA data from train lines from 2020 - 2024.
+* `data` (csv files): The CSV files where DataFrames will be exported.
 
 ## Usage
 
@@ -77,3 +74,14 @@ analysis.ipynb
 
 * The top worst 5 months (Sep 2021,Oct 2022, Dec 2023, Nov 2024, Jan 2024) can suggest delays occur the most during the fall and winter months. From 2020 to 2024, average platform and train delays are higher in colder months. This insight can help transit authorities target months that need more improvements such as increasing staffing and planning more scheduled MTA services for less wait time. 
 
+
+
+
+
+
+
+2. Does weather have an influence on train time? -Thalyann
+3. Is there a difference in service time between off-peak and peak service periods? -Rosania
+    a. What influence does the number of passengers have with train punctuality?
+
+* According to Pearson's correlation coefficient for Number of Passengers and Customer Journey Time, there is no correlation. Customer Journey Time was -0.31 which is closer to -1 than 0. Hence, it's a very weak negative correlation. It looks that there's no influence on the number of passengers and train punctuality.
