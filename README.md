@@ -1,29 +1,20 @@
 # MTA Subway Data Analysis
-## Overview
 
 To explore trends in the MTA subway system in New York City, we performed a different sets of analysis. The goal of this analysis is to evaluate subway performance to understand commuter experience, service reliability and train delay trends. We will downloading subway consumer metrics csv files from 2015-2014 and integrate weather datasets to explore these trends.
 
-## Methodology
- 
+## Overview
+The goal of this analysis is to:
+
 * Download real-time subway feed data from the MTA API.
 * Parse the Protocol Buffer encoded data.
-* Structure the data into manageable Pandas DataFrames for further analysis by joining data sets.
-* Explore delay metrics, performance scores and delay trends across divisions, months, and years using visual aids and Pearson's correlation.
- 
-
+* Structure the data into manageable Pandas DataFrames for further analysis.
+* Potentially explore trends, predict arrivals, or visualize subway activity (depending on future development).
 
 ## Files in this Project
-
-* `mta-att-apipy`: The access point of our MTA api, JSON data
-* `gtfs_realtime_pb2.py`: Python classes generated from the `gtfs-realtime.proto` file (required for parsing the feed).
-* `gtfs-realtime.proto`: The Protocol Buffer schema definition for GTFS Realtime data.
-* `data` (csv files): The CSV files where DataFrames will be exported.
-
-## Usage
-
-To view the analysis, open:
-
-analysis.ipynb
+* `data` (csv files): The CSV files where DataFrames will be generated from.
+* notebooks: Jupyter notebooks (5) for data exploration and analysis.
+* `mta-att-apipy`: The access point of our MTA api, JSON data. Was not implemented in the analysis but is available for future use.
+* 'README.md': This file, which provides an overview of the project and answers to analytical questions.
 
 ## Dataset Dictionary
 
@@ -42,7 +33,6 @@ analysis.ipynb
 
 
 ## Analytical questions and responses
-
 
 ### How punctual/consistent are the trains in each division from 2020-2024? 
 
@@ -74,14 +64,24 @@ analysis.ipynb
 
 * The top worst 5 months (Sep 2021,Oct 2022, Dec 2023, Nov 2024, Jan 2024) can suggest delays occur the most during the fall and winter months. From 2020 to 2024, average platform and train delays are higher in colder months. This insight can help transit authorities target months that need more improvements such as increasing staffing and planning more scheduled MTA services for less wait time. 
 
+### Does weather have an influence on train time?
+
+* Ultimately, the correlation between weather (precipitation, snow, and temperature) and total train time for underground trains is weak (0.06, 0.03, and 0.003 respectively).
+
+* However, the correlation between precipitation and total train time for above ground trains is slightly stronger (0.08 vs 0.06). This suggests that rain has a minor impact on above ground when compared to the service of all trains. For snow and temperature, the correlation is even weaker (0.03 and 0.003 respectively). This suggests that snow and temperature have a negligible impact on above ground trains when compared to underground trains.
+
+* This could be an incorrect assessment, as the trains were divided into above ground and underground based on the station location. This means that the train could be above ground for part of the trip and underground for the rest. This could lead to an underestimation of the impact of weather on total train time for above ground trains.
+
+* A future analysis could include a more detailed breakdown of the train routes and their locations to get a better understanding of the impact of weather on total train time. This could include breaking down the train routes into percentages of their being above ground and underground, and then using that information to calculate a more accurate correlation between weather and total train time.
+
+### Is there a difference in service time between off-peak and peak service periods?
+
+* There is no difference in service time between offpeak and peak service. From the graphs below, the average customer journey time for offpeak and peak service was evenly split for both. Peak service is slight more than 3.0 compared to offpeak service in comparing with number of passengers. Besides that, nothing influences the service time between offpeak and peak service.
+
+* According to Pearson's correlation coefficient for Number of Passengers and Customer Journey Time, there is no correlation. Customer Journey Time was -0.31 which is closer to -1 than 0. Hence, it's a very weak negative correlation. It looks that there's no influence on the number of passengers and train punctuality.
 
 
-
-
-
-
-2. Does weather have an influence on train time? -Thalyann
-3. Is there a difference in service time between off-peak and peak service periods? -Rosania
-    a. What influence does the number of passengers have with train punctuality?
+### What influence does the number of passengers have with train punctuality?
+* There is no difference in service time between offpeak and peak service. From the graphs below, the average customer journey time for offpeak and peak service was evenly split for both. Peak service is slight more than 3.0 compared to offpeak service in comparing with number of passengers. Besides that, nothing influences the service time between offpeak and peak service.
 
 * According to Pearson's correlation coefficient for Number of Passengers and Customer Journey Time, there is no correlation. Customer Journey Time was -0.31 which is closer to -1 than 0. Hence, it's a very weak negative correlation. It looks that there's no influence on the number of passengers and train punctuality.
